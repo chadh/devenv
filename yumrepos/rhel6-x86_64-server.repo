@@ -1,0 +1,5 @@
+[rhel6-x86_64-server]
+name=Red Hat Enterprise Linux Server
+baseurl=http://rhnmirror.cc.gatech.edu/rhel6-x86_64-server/Server
+enabled=1
+gpgcheck=1

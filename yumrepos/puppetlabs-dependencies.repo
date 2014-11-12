@@ -1,0 +1,7 @@
+[puppetlabs-dependencies]
+name=PuppetLabs Products Dependencies
+baseurl=http://cobbler.cc.gatech.edu/cobbler/repo_mirror/rhel6-x86_64-puppetlabs-dependencies
+enabled=1
+gpgcheck=1
+gpgkey=http://linux-install.cc.gatech.edu/rpms/rpm-gpg/RPM-GPG-KEY-puppetlabs
+priority=50
