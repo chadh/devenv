@@ -1,0 +1,30 @@
+postgres:
+  build: postgres
+  ports:
+    - '5432:5432'
+
+puppetserverstorage:
+  build: puppetserverstorage
+
+puppetserver:
+  build: puppetserver
+  command: '/usr/bin/java -Xms512m -Xmx512m -XX:MaxPermSize=256m -jar /usr/share/puppetserver/puppet-server-release.jar --config /etc/puppetserver/conf.d --bootstrap-config /etc/puppetserver/bootstrap.cfg'
+  ports:
+    - '8140:8140'
+  volumes_from:
+    - puppetserverstorage
+
+puppetdbstorage:
+  build: puppetdbstorage
+
+puppetdb:
+  build: puppetdb
+  links:
+    - postgres
+    - puppetserver
+  command: '/bin/bash -x bootstrap.sh'
+  ports:
+    - '18081:8081'
+  volumes_from:
+    - puppetdbstorage
+

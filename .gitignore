@@ -1,0 +1,5 @@
+.vagrant
+docker_shared
+hacks
+rhel6.docker.tgz
+bin/nsenter
