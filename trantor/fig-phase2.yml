@@ -8,7 +8,7 @@ puppetserverstorage:
 
 puppetserver:
   build: puppetserver
-  command: 'puppet apply docker_shared/hosts.pp && puppet apply bootstrap-phase2.pp && /usr/bin/java -Xms512m -Xmx512m -XX:MaxPermSize=256m -jar /usr/share/puppetserver/puppet-server-release.jar --config /etc/puppetserver/conf.d --bootstrap-config /etc/puppetserver/bootstrap.cfg'
+  command: '/bin/bash -x bootstrap.sh 2'
   ports:
     - '8140:8140'
   volumes_from:
@@ -22,7 +22,7 @@ puppetdb:
   links:
     - postgres
     - puppetserver
-  command: 'puppet apply docker_shared/hosts.pp && /usr/bin/java -Xmx192m -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/var/log/puppetdb/puppetdb-oom.hprof -Djava.security.egd=file:/dev/urandom -cp /usr/share/puppetdb/puppetdb.jar clojure.main -m com.puppetlabs.puppetdb.core services -c /etc/puppetdb/conf.d'
+  command: '/bin/bash -x bootstrap.sh 2'
   ports:
     - '18081:8081'
   volumes_from:
