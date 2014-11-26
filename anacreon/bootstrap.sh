@@ -1,8 +1,8 @@
 #!/bin/bash
 
-lvresize -L+5G /dev/vg1/var && resize2fs /dev/vg1/var
+yum install -y puppet
 puppet apply /vagrant/docker_shared/hosts.pp
 yum install -y python-pip libyaml-devel python-devel
 pip install -U fig
 yum install -y docker-io && service docker restart
-curl -s  http://linux-install.cc.gatech.edu/boxes/rhel6.docker.tgz | docker import - rhel:6.5
+curl -s  http://linux-install.cc.gatech.edu/boxes/rhel7.docker.tgz | docker import - rhel7
