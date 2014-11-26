@@ -1,10 +1,30 @@
 [rhel7-server-x86_64]
 name=rhel7-server-x86_64
-baseurl=http://rhnmirror.cc.gatech.edu/rhel7-x86_64-server
+baseurl=http://rhnmirror.cc.gatech.edu/rhel7-x86_64-server/Server
 enabled=1
 priority=99
 gpgcheck=0
 
+[rhel7-server-x86_64-common]
+name=rhel7-server-x86_64-common
+baseurl=http://rhnmirror.cc.gatech.edu/rhel7-x86_64-server/Common
+enabled=1
+priority=99
+gpgcheck=0
+
+[rhel7-server-x86_64-Supplementary]
+name=rhel7-server-x86_64-supplementary
+baseurl=http://rhnmirror.cc.gatech.edu/rhel7-x86_64-server/Supplementary
+enabled=1
+priority=99
+gpgcheck=0
+
+[rhel7-server-x86_64-Extras]
+name=rhel7-server-x86_64-extras
+baseurl=http://rhnmirror.cc.gatech.edu/rhel7-x86_64-server/Extras
+enabled=1
+priority=99
+gpgcheck=0
 
 [rhel7-server-x86_64-optional]
 name=rhel7-server-x86_64-optional
