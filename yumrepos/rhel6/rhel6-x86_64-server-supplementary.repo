@@ -1,0 +1,5 @@
+[rhel6-x86_64-server-supplementary]
+name=Red Hat Enterprise Linux Server Supplemental Packages
+baseurl=http://rhnmirror.cc.gatech.edu/rhel6-x86_64-server/Supplementary
+enabled=1
+gpgcheck=1

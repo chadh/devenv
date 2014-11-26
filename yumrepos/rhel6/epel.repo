@@ -1,0 +1,8 @@
+[epel]
+name=Extra Packages for Enterprise Linux
+baseurl=http://cobbler.cc.gatech.edu/cobbler/repo_mirror/epel-6-x86_64
+enabled=1
+gpgcheck=1
+gpgkey=http://linux-install.cc.gatech.edu/rpms/rpm-gpg/RPM-GPG-KEY-EPEL-6
+exclude=rubygem-activesupport rubygem-stomp puppet facter
+priority=99

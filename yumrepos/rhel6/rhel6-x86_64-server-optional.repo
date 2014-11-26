@@ -1,0 +1,5 @@
+[rhel6-x86_64-server-optional]
+name=Red Hat Enterprise Linux Server Optional Packages
+baseurl=http://rhnmirror.cc.gatech.edu/rhel6-x86_64-server/Optional
+enabled=1
+gpgcheck=1
