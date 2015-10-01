@@ -12,8 +12,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
   # trantor is the puppet server (master, pdb, pgsql, foreman)
   config.vm.define 'trantor' do |host|
-    host.vm.box = 'rhel6-x86_64'
-    host.vm.box_url = 'http://linux-install.cc.gatech.edu/boxes/rhel6-x86_64.box'
+    host.vm.box = 'rhel7-x86_64'
+    host.vm.box_url = 'http://linux-install.cc.gatech.edu/boxes/rhel7-x86_64.box'
     host.vm.host_name = 'trantor.vm'
     host.vm.network 'private_network', ip: '10.250.0.10'
 
@@ -22,8 +22,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # anacreon is the ELK server
   config.vm.define 'anacreon' do |host|
-    host.vm.box = 'rhel6-x86_64'
-    host.vm.box_url = 'http://linux-install.cc.gatech.edu/boxes/rhel6-x86_64.box'
+    host.vm.box = 'rhel7-x86_64'
+    host.vm.box_url = 'http://linux-install.cc.gatech.edu/boxes/rhel7-x86_64.box'
     host.vm.host_name = 'anacreon.vm'
     host.vm.network 'private_network', ip: '10.250.0.11'
 
